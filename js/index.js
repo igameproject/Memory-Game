@@ -15,7 +15,7 @@ $(document).ready(function(){
         }
         previous = present;
 
-        if(tiles > 0 ){
+        if(tiles == 40  ){
           $(".wrapper").html("<center class = 'youwin'><h1>You win</h1><p>Refreshing Game</p><i class='fa fa-refresh fa-spin fa-3x'></i></center>");
 
           setTimeout(function(){location.reload();},4000);
