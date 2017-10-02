@@ -1,0 +1,68 @@
+body{
+	background: #333;
+    font-family: verdana;
+}
+
+.wrapper{
+	width: 100%;
+	max-width: 1200px;
+	margin: 40px auto;
+}
+
+
+
+.panels{
+	list-style: none;
+	padding-right: 40px ;
+	
+
+}
+
+.panels li{
+	position: relative;
+	width: 10%;
+	margin: 0;
+	display: block;
+	box-sizing: border-box;
+	float:left;
+
+}
+
+.panels li div{
+	width: 100%;
+	padding: 50% 0;
+	text-align: center;
+	color: #fff;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 0;
+	cursor: pointer;
+
+}
+
+
+.panels li div.back{
+	transform :rotateY(90deg);
+
+}
+
+.panels div.front{
+	position: absolute;
+	padding:64% 0 64% 0;
+}
+
+.panels li:hover div.front{
+	animation: twirl 0.2s ease-in forwards;
+}
+
+.panels li:hover div.back{
+	animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+@keyframes twirl{
+	0%{ transform : rotateY(0deg) }
+	100%{transform: rotateY(90deg)}
+
+
+
+
