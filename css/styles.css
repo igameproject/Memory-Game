@@ -3,12 +3,18 @@ body{
     font-family: verdana;
 }
 
+
 .wrapper{
 	width: 100%;
 	max-width: 1200px;
 	margin: 40px auto;
 }
 
+.youwin{
+	color:white;
+	margin:200px auto;
+
+}
 
 
 .panels{
@@ -59,9 +65,10 @@ body{
 .panels li:hover div.back{
 	animation: twirl 0.2s 0.2s ease-out forwards reverse;
 }
+
 @keyframes twirl{
-	0%{ transform : rotateY(0deg) }
-	100%{transform: rotateY(90deg)}
+	0% {transform : rotateY(0deg) }
+	100% {transform: rotateY(90deg)}
 
 
 
