@@ -13,7 +13,7 @@ memory cards are the same , they will stay opened without any icon and you can c
 Otherwise both cards will flip back over and you will get another try. The objective of the matching memory game 
 for toodlers is to find all of the pairs nd to complete the entire table.
 
-##You can see the screen shots of game!
+#You can see the screen shots of game!
 
 ![screenshot 1](https://user-images.githubusercontent.com/23031761/31669980-373f3bec-b374-11e7-813d-a10e9039bbc6.png)
 ![screenshot 4](https://user-images.githubusercontent.com/23031761/31669982-37998c00-b374-11e7-8e86-9fc18cee7a47.png)
