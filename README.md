@@ -1,31 +1,42 @@
 # Memory-Game
-
-* __What does this project do ?__<br>
-This is a Memory Game created using HTML5, Javascript and CSS.<br> 
 [Play here!](http://igameproject.com/Memory-Game/)
 
 ![GameStarts](readme_images/GameStart.png)
 
-* __Why is this project useful?__<br>
-This project is created and has a fantastic interface. This is a friendly project and any kind of ideas crazy or creative are accepted.
+*__What does this project do?__
 
-* __How do I get started?__<br>
-Check out issues section and see which issue can you fix. If you find a way to improve the game that hasn't been mentioned in the issues, create a new issue.
+This is a clone of the classsic Memory Card Game created using HTML5 and Javascript and some DOM animation effects
 
-* __Where can I get more help, if I need it?__<br>
-You can contact the owner at ...
+*__What is this project intended for?__
+
+This project is intended to be a learning experience and a cool way to demonstrate the power of HTML5 and Javascript and also to create awesome games to play if someone feels bored.Also, this project is open source and any kind of ideas and contributions are always welcome.
+
+*__How can I start to contribute?__
+
+Check out issues section and see which issue can you fix. Follow atleast Javascript ES2015 coding standards in all commits (ES6 is even better).Most importantly, please read the contribution guidelines [here](https://github.com/igameproject/Memory-Game/blob/master/contributing.md)
+
+If you find a way to improve the game that hasn't been mentioned in the issues, create a new issue. And most important of all discuss with your peers on what is the best way to solve a problem.
+
+*__Whom do I contact in case of any issues?__
+
+You can contact the owner at  r.vignesh149@gmail.com or techie.vigneshramesh@gmail.com 
+
+## Aim of the game
+
+The aim of the game is to find all the matching pairs of tiles/cards in the fastest time you can.
 
 ## How to play
 
-* __Hover your mouse over the tile to flip it.__<br>
-* __Memorize the logo behid it.__<br>
-* __Match the pair of tiles with the same logo to make them disappear.__<br>
+Just hover over a tile to reveal a symbol and try to hover over another tile in the grid which you think has the matching symbol.
 
-![GameInBetween](readme_images/GameInBetween.png)
+If the symbol actually matches then voila, you found the correct tile and they disappear, clearing a part of the board.
+Else the original tile closes and you have to try again.
 
-* __When all tiles are matched, You win the game !!__ <br>
+You win when the entire borad is cleared after you have found all the matching pair of tiles.
 
 ![GameEnds](readme_images/GameEnds.png)
+
+Have fun!!
 
 ## More optional sections
 
@@ -38,5 +49,4 @@ PRs accepted.
 ## License
 
 [MIT © 2017 Indian Game Project.](../LICENSE)
-
 
