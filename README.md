@@ -7,14 +7,13 @@ This is a Memory Game created using HTML5, Javascript and CSS.<br>
 ![GameStarts](readme_images/GameStart.png)
 
 * __Why is this project useful?__<br>
-This project is created to get user familiar with HTML5 canvas,DOM and javascript to create awesome games and have fun together as a community. This is a friendly project and any kind of ideas crazy or creative are accepted.
+This project is created and has a fantastic interface. This is a friendly project and any kind of ideas crazy or creative are accepted.
 
 * __How do I get started?__<br>
-Check out issues section and see which issue can you fix. Follow javascript ES2015 coding standards in all commits.
-If you find a way to improve the game that hasn't been mentioned in the issues. Create a new issue. And most important of all discuss with your peers on what is the best way to solve a problem
+Check out issues section and see which issue can you fix. If you find a way to improve the game that hasn't been mentioned in the issues, create a new issue.
 
 * __Where can I get more help, if I need it?__<br>
-You can contact the owner at techie.vigneshramesh@gmail.com
+You can contact the owner at ...
 
 ## How to play
 
@@ -27,4 +26,17 @@ You can contact the owner at techie.vigneshramesh@gmail.com
 * __When all tiles are matched, You win the game !!__ <br>
 
 ![GameEnds](readme_images/GameEnds.png)
+
+## More optional sections
+
+## Contribute
+
+See [the contribute file](contribute.md)!
+PRs accepted.
+
+
+## License
+
+[MIT © 2017 Indian Game Project.](../LICENSE)
+
 
