@@ -3,21 +3,21 @@
 
 ![GameStarts](readme_images/GameStart.png)
 
-*__What does this project do?__
+* __What does this project do?__
 
 This is a clone of the classsic Memory Card Game created using HTML5 and Javascript and some DOM animation effects
 
-*__What is this project intended for?__
+* __What is this project intended for?__
 
 This project is intended to be a learning experience and a cool way to demonstrate the power of HTML5 and Javascript and also to create awesome games to play if someone feels bored.Also, this project is open source and any kind of ideas and contributions are always welcome.
 
-*__How can I start to contribute?__
+* __How can I start to contribute?__
 
 Check out issues section and see which issue can you fix. Follow atleast Javascript ES2015 coding standards in all commits (ES6 is even better).Most importantly, please read the contribution guidelines [here](https://github.com/igameproject/Memory-Game/blob/master/contributing.md)
 
 If you find a way to improve the game that hasn't been mentioned in the issues, create a new issue. And most important of all discuss with your peers on what is the best way to solve a problem.
 
-*__Whom do I contact in case of any issues?__
+* __Whom do I contact in case of any issues?__
 
 You can contact the owner at  r.vignesh149@gmail.com or techie.vigneshramesh@gmail.com 
 
@@ -42,7 +42,7 @@ Have fun!!
 
 ## Contribute
 
-See [the contribute file](contribute.md)!
+See [https://github.com/igameproject/Memory-Game/blob/master/contributing.md](contribute.md)!
 PRs accepted.
 
 
