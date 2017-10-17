@@ -19,7 +19,7 @@ If you find a way to improve the game that hasn't been mentioned in the issues, 
 
 * __Whom do I contact in case of any issues?__
 
-You can contact the owner at  r.vignesh149@gmail.com or techie.vigneshramesh@gmail.com 
+You can contact the owner at  techie.vigneshramesh@gmail.com 
 
 ## Aim of the game
 
@@ -37,13 +37,6 @@ You win when the entire borad is cleared after you have found all the matching p
 ![GameEnds](readme_images/GameEnds.png)
 
 Have fun!!
-
-## More optional sections
-
-## Contribute
-
-See [https://github.com/igameproject/Memory-Game/blob/master/contributing.md](contribute.md)!
-PRs accepted.
 
 
 ## License
