@@ -1,17 +1,21 @@
 $(document).ready(function(){
     // var arr = [];
+    var ul = document.querySelector('ul');
+    for (var i = ul.children.length; i >= 0; i--) {
+      ul.appendChild(ul.children[Math.random() * i | 0]);
+    }
     var present,previous;
     var flag = true;
     var tiles = 0;
     $(".back").hover(function(){
         var present = $(this).attr("name");
         var parentId =  $(this).parent().attr("id");
-        
+
         if(present == previous + '2' || previous == present + '2' ){
-           
+
            $("[id=" + parentId + "]").css("visibility", "hidden");
            tiles += 2
-           
+
         }
         previous = present;
 
