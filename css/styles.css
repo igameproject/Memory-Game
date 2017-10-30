@@ -1,40 +1,34 @@
-body{
+body {
 	background: #333;
     font-family: verdana;
-
-
 }
 
-
-.wrapper{
+.wrapper {
 	width: 100%;
 	max-width: 1200px;
 	margin: 20px auto;
 }
 
-.youwin{
+.youwin {
 	color:white;
 	margin:200px auto;
-
 }
 
-
-.panels{
+.panels {
 	list-style: none;
 	padding-left: 0 ;
 }
 
-.panels li{
+.panels li {
 	position: relative;
 	width: 10%;
 	margin: 0;
 	display: block;
 	box-sizing: border-box;
 	float:left;
-
 }
 
-.panels li div{
+.panels li div {
 	width: 100%;
 	padding: 45% 0;
 	text-align: center;
@@ -44,43 +38,35 @@ body{
 	letter-spacing: 2px;
 	line-height: 0;
 	cursor: pointer;
-
 }
 
-
-.panels li div.back{
+.panels li div.back {
 	transform :rotateY(90deg);
-
 }
 
-.panels div.front{
+.panels div.front {
 	position: absolute;
 	/*padding:64% 0 64% 0;*/
 }
 
-
-.panels li:hover div.front{
+.panels li:hover div.front {
 	animation: twirl 0.2s ease-in forwards;
 }
 
-.panels li:hover div.back{
+.panels li:hover div.back {
 	animation: twirl 0.2s 0.2s ease-out forwards reverse;
 }
 
-@keyframes twirl{
-	0% {transform : rotateY(0deg) }
-	100% {transform: rotateY(90deg)}
-	 }
+@keyframes twirl {
+    0% {transform : rotateY(0deg) }
+    100% {transform: rotateY(90deg)}
+}
 
-
-@media (max-width: 576px){
-		
-	.panels li{
+@media (max-width: 576px) {
+	.panels li {
 		width: 20%;
 	}
-	.panels li div{
+	.panels li div {
 		padding: 40% 0;
 	}
-	
-
 }
