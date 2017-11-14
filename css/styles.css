@@ -2,13 +2,14 @@ body{
 	background: #333;
     font-family: verdana;
 
+
 }
 
 
 .wrapper{
 	width: 100%;
 	max-width: 1200px;
-	margin: 40px auto;
+	margin: 20px auto;
 }
 
 .youwin{
@@ -35,7 +36,7 @@ body{
 
 .panels li div{
 	width: 100%;
-	padding: 50% 0;
+	padding: 45% 0;
 	text-align: center;
 	color: #fff;
 	font-size: 10px;
@@ -54,14 +55,12 @@ body{
 
 .panels div.front{
 	position: absolute;
-	padding:64% 0 64% 0;
+	/*padding:64% 0 64% 0;*/
 }
 
 .panels div.front:hover{
 	outline: 3px solid #00b8ff;
 }
-
-
 
 .match div.front{
 	outline: 6px solid #89e15c;
@@ -74,6 +73,9 @@ body{
 
 .mismatch div.front{
 	outline: 3px dashed red;
+}
+
+.panels li:hover div.front{
 	animation: twirl 0.2s ease-in forwards;
 }
 .mismatch div.back{
@@ -110,28 +112,15 @@ body{
 	100% {transform: rotateY(90deg)}
 	 }
 
-@media (max-width: 786px){
-		
-	.panels li{
-		width: 20%;
-	}
-
-	.panels div.front{
-		position: absolute;
-		padding:60% 0 60% 0;
-	}
-
-}
 
 @media (max-width: 576px){
 		
 	.panels li{
-		width: 25%;
+		width: 20%;
 	}
-
-	.panels div.front{
-		position: absolute;
-		padding:65% 0 65% 0;
+	.panels li div{
+		padding: 40% 0;
 	}
+	
 
 }
