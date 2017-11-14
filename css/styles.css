@@ -35,6 +35,7 @@ body{
 	display: block;
 	box-sizing: border-box;
 	float:left;
+        animation: loadingCards .3s ease-in ;
 
 }
 
@@ -48,6 +49,7 @@ body{
 	letter-spacing: 2px;
 	line-height: 0;
 	cursor: pointer;
+
 
 }
 
@@ -117,6 +119,10 @@ body{
 	100% {transform: rotateY(90deg)}
 	 }
 
+@keyframes loadingCards {
+  0% {transform : scale(0) }
+  100% {transform: scale(1)}
+}
 
 @media (max-width: 576px){
 		
