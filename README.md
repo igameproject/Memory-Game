@@ -1,4 +1,5 @@
 # Memory-Game
+
 [Play here!](http://igameproject.com/Memory-Game/)
 
 ![GameStarts](readme_images/GameStart.png)
@@ -42,4 +43,5 @@ Have fun!!
 ## License
 
 [MIT © 2017 Indian Game Project.](../LICENSE)
+
 
