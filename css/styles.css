@@ -1,9 +1,5 @@
-html {
-    zoom: 0.85; /* Old IE only */
-    -moz-transform: scale(0.85);
-    -webkit-transform: scale(0.85);
-    transform: scale(0.85);
-}
+
+
 
 body{
 	background: #333;
@@ -13,7 +9,7 @@ body{
 .wrapper{
 	width: 100%;
 	max-width: 1200px;
-	margin: 20px auto;
+	margin: auto;
 }
 
 .youwin{
