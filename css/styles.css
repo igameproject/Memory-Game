@@ -119,13 +119,13 @@ body{
 }
 
 @media (max-width: 576px){
-		
+
 	.panels li{
 		width: 20%;
 	}
 	.panels li div{
 		padding: 40% 0;
 	}
-	
+
 
 }
