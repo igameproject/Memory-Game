@@ -1,6 +1,4 @@
 
-
-
 body{
 	background: #333;
     font-family: verdana;
@@ -26,7 +24,7 @@ body{
 
 .panels li{
 	position: relative;
-	width: 10%;
+	width: 8%;
 	margin: 10px;
 	display: block;
 	box-sizing: border-box;

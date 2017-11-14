@@ -5,6 +5,8 @@ var time = new Date().getTime();
 var blockInput = false;
 
 $(document).ready(function(){
+
+	
     
 	$(".front").click(function(){
 		if(blockInput){
