@@ -3,6 +3,7 @@ var first = null, second = null;
 var tiles = 0;
 var time = new Date().getTime();
 var blockInput = false;
+var clicks=0;
 
 $(document).ready(function(){
 
@@ -15,35 +16,44 @@ $(document).ready(function(){
 
     
 	$(".front").click(function(){
-		if(blockInput){
-			return;
-		}
-		console.log("first : " +first);
-		console.log("second: " +second);
-		if(first == null){
-			first = $(this).parent();			
-			first.addClass("activated");
-			return;
-		}
-		if(first != second){
-			second = $(this).parent();				
-			second.addClass("activated");
-		}
-		
+
+		clicks++;
         
-		if(first != null && second != null){
-			if(first.attr("id") == second.attr("id")){
-				blockInput = true;	
-				first.removeClass("activated").addClass("match");
-				second.removeClass("activated").addClass("match");
-				setTimeout(function() { removeCorrectTiles(); }, 700);
-			}else{
-				blockInput = true;
-				first.removeClass("activated").addClass("mismatch");
-				second.removeClass("activated").addClass("mismatch");
-				setTimeout(function() { resetWrongTiles(); }, 800);
+        if(clicks === 1) {
+			
+			setTimeout(function(){
+				clicks = 0;
+			},700);
+
+			if(blockInput){
+				return;
 			}
-		   
+			console.log("first : " +first);
+			console.log("second: " +second);
+			if(first == null){
+				first = $(this).parent();			
+				first.addClass("activated");
+				return;
+			}
+			if(first != second){
+				second = $(this).parent();				
+				second.addClass("activated");
+			}
+			
+	        
+			if(first != null && second != null){
+				if(first.attr("id") == second.attr("id")){
+					blockInput = true;	
+					first.removeClass("activated").addClass("match");
+					second.removeClass("activated").addClass("match");
+					setTimeout(function() { removeCorrectTiles(); }, 700);
+				}else{
+					blockInput = true;
+					first.removeClass("activated").addClass("mismatch");
+					second.removeClass("activated").addClass("mismatch");
+					setTimeout(function() { resetWrongTiles(); }, 800);
+				}
+			}   
 		}
 	});
 });
