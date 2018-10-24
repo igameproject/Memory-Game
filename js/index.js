@@ -5,6 +5,14 @@ var time = new Date().getTime();
 var blockInput = false;
 
 $(document).ready(function(){
+
+    // var arr = [];
+    var ul = document.querySelector('ul');
+    for (var i = ul.children.length; i >= 0; i--) {
+      ul.appendChild(ul.children[Math.random() * i | 0]);
+    }
+   
+
     
 	$(".front").click(function(){
 		if(blockInput){
@@ -40,6 +48,7 @@ $(document).ready(function(){
 	});
 });
 
+
 resetWrongTiles = function(){
 	first.removeClass("mismatch");
 	second.removeClass("mismatch");
@@ -62,9 +71,11 @@ unblock = function(){
 	blockInput = false;
 }
 
+
 checkWin = function(){
 	if(tiles == 40){
 		alert("You won in " + (new Date().getTime() - time) / 1000 + " seconds! click OK to restart");
 		location.reload();
 	}
 }
+
