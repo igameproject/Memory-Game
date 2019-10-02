@@ -1,7 +1,7 @@
-
 body{
 	background: #333;
     font-family: verdana;
+	overflow:hidden;
 }
 
 .wrapper{
@@ -13,9 +13,7 @@ body{
 .youwin{
 	color:white;
 	margin:200px auto;
-
 }
-
 
 .panels{
 	list-style: none;
@@ -29,11 +27,9 @@ body{
 	display: block;
 	box-sizing: border-box;
 	float:left;
-        animation: loadingCards .3s ease-in ;
-
 }
 
-.panels li div{
+.panels div{
 	width: 100%;
 	padding: 45% 0;
 	text-align: center;
@@ -43,30 +39,25 @@ body{
 	letter-spacing: 2px;
 	line-height: 0;
 	cursor: pointer;
-
-
 }
 
-
-.panels li div.back{
-	transform :rotateY(90deg);
-
+.panels div.back{
+	transform: rotateY(90deg);
 }
 
 .panels div.front{
 	position: absolute;
-	/*padding:64% 0 64% 0;*/
 }
 
 .panels div.front:hover{
 	outline: 3px solid #00b8ff;
-
 }
 
 .match div.front{
 	outline: 6px solid #89e15c;
 	animation: twirl 0.2s ease-in forwards;
 }
+
 .match div.back{
 	outline: 6px solid #89e15c;
 	animation: twirl 0.2s 0.2s ease-out forwards reverse;
@@ -76,9 +67,6 @@ body{
 	outline: 3px dashed red;
 }
 
-/*.panels li:hover div.front{
-	animation: twirl 0.2s ease-in forwards;
-}*/
 .mismatch div.back{
 	outline: 3px dashed red;
 	animation: twirl 0.2s 0.2s ease-out forwards reverse;
@@ -88,6 +76,7 @@ body{
 	outline: 3px solid white;
 	animation: twirl 0.2s ease-in forwards;
 }
+
 .activated div.back{
 	outline: 3px solid white;
 	animation: twirl 0.2s 0.2s ease-out forwards reverse;
@@ -95,37 +84,31 @@ body{
 
 .done div.front{
 	visibility: hidden;
-}
-.done div.back{
-	animation: finish 0.2s ease-out forwards;
+	cursor: auto;
 }
 
+.done div.back{
+	animation: finish 0.8s ease-out forwards;
+	animation-timing-function:cubic-bezier(.02,.92,.39,1.72)
+	cursor: auto;
+}
 
 @keyframes finish{
 	0% {transform : scale(1) }
 	100% {transform: scale(0.3)}
-	 }
-
+}
 
 @keyframes twirl{
 	0% {transform : rotateY(0deg) }
 	50% {transform : rotateX(30deg)}
 	100% {transform: rotateY(90deg)}
-	 }
-
-@keyframes loadingCards {
-  0% {transform : scale(0) }
-  100% {transform: scale(1)}
 }
 
 @media (max-width: 576px){
-
 	.panels li{
 		width: 20%;
 	}
 	.panels li div{
 		padding: 40% 0;
 	}
-
-
 }
