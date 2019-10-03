@@ -1,10 +1,10 @@
 body{
-	background: #333;
+	background: #999;
     font-family: verdana;
 	overflow:hidden;
 }
 
-.wrapper{
+.wrapper{padding-top: 7%;
 	width: 100%;
 	max-width: 1200px;
 	margin: auto;
@@ -50,7 +50,7 @@ body{
 }
 
 .panels div.front:hover{
-	outline: 3px solid #00b8ff;
+	outline: 4px solid #00b8ff;
 }
 
 .match div.front{
@@ -64,21 +64,21 @@ body{
 }
 
 .mismatch div.front{
-	outline: 3px dashed red;
+	outline: 4px dashed red;
 }
 
 .mismatch div.back{
-	outline: 3px dashed red;
+	outline: 4px dashed red;
 	animation: twirl 0.2s 0.2s ease-out forwards reverse;
 }
 
 .activated div.front{
-	outline: 3px solid white;
+	outline: 4px solid white;
 	animation: twirl 0.2s ease-in forwards;
 }
 
 .activated div.back{
-	outline: 3px solid white;
+	outline: 4px solid white;
 	animation: twirl 0.2s 0.2s ease-out forwards reverse;
 }
 
