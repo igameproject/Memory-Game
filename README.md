@@ -33,7 +33,7 @@ Just hover over a tile to reveal a symbol and try to hover over another tile in 
 If the symbol actually matches then voila, you found the correct tile and they disappear, clearing a part of the board.
 Else the original tile closes and you have to try again.
 
-You win when the entire borad is cleared after you have found all the matching pair of tiles.
+You win when the entire board is cleared after you have found all the matching pair of tiles.
 
 ![GameEnds](readme_images/GameEnds.png)
 
