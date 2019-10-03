@@ -71,7 +71,7 @@ unblock = function(){
 
 checkWin = function(){
 	if(tiles == 40){
-		alert("You won in " + (new Date().getTime() - time) / 1000 + " seconds! click OK to restart");
+		alert("You WON in " + (new Date().getTime() - time) / 1000 + " seconds! click OK to Restart");
 		location.reload();
 	}
 }
