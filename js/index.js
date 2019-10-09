@@ -3,36 +3,41 @@ var first = null, second = null;
 var tiles = 0;
 var time = new Date().getTime();
 var blockInput = false;
-
+var moves = 0;
 $(document).ready(function(){
-	
+
     var ul = document.querySelector('ul');
     for (var i = ul.children.length; i >= 0; i--) {
       ul.appendChild(ul.children[Math.random() * i | 0]);
     }
-	
+
 	randomizeStartOffset();
 	transitionToStartPosition();
-   
+
+	$("#reset").click(function(){
+			$('#moves').html(function(i, val) { return val = 0 });
+		location.reload()
+	})
+
 	$(".front").click(function(){
 		if(blockInput){
 			return;
 		}
-		
+
 		if(first == null){
-			first = $(this).parent();			
+			first = $(this).parent();
 			first.addClass("activated");
 			return;
 		}
-		
+
 		if(first != second){
-			second = $(this).parent();				
+			second = $(this).parent();
 			second.addClass("activated");
 		}
-		
+
 		if(first != null && second != null){
 			if(first.attr("id") == second.attr("id")){
-				blockInput = true;	
+				blockInput = true;
 				first.removeClass("activated").addClass("match");
 				second.removeClass("activated").addClass("match");
 				setTimeout(function() { removeCorrectTiles(); }, 700);
@@ -56,7 +61,6 @@ removeCorrectTiles = function(){
 	first.removeClass("match").addClass("done");
 	second.removeClass("match").addClass("done");
 	unblock();
-	
 	tiles += 2;
 	checkWin();
 }
@@ -67,6 +71,7 @@ unblock = function(){
 	firstID = -1;
 	secondID = -1;
 	blockInput = false;
+	$('#moves').html(function(i, val) { return val*1+1 });
 }
 
 checkWin = function(){
@@ -78,7 +83,7 @@ checkWin = function(){
 
 randomizeStartOffset = function(){
 	$(".front").each(function( index ) {$( this ).css({
-		top: (Math.random() * 2 - 1) * 550, 
+		top: (Math.random() * 2 - 1) * 550,
 		left: (Math.random() * 2 - 1) * 550}) });
 }
 
@@ -88,7 +93,7 @@ transitionToStartPosition = function(){
 		$(".front").each(function( index ) {
 			var position = $( this ).position();
 			$( this ).css({
-				top: position.top * .85, 
+				top: position.top * .85,
 				left: position.left * .85});
 		});
 		setTimeout(function() { transitionToStartPosition(); }, 16);
@@ -96,5 +101,3 @@ transitionToStartPosition = function(){
 		$(".front").each(function( index ) {$( this ).css({top: 0, left: 0}) });
 	}
 }
-
-

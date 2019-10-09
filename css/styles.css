@@ -93,6 +93,38 @@ body{
 	cursor: auto;
 }
 
+.button-wrapper {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.moves {
+	display: inline-block;
+	color: white;
+	font-size: 20px;
+}
+
+#moves {
+  display: inline-block;
+	color: white;
+	margin-left: 5px;
+	font-size: 20px;
+}
+
+#reset {
+  background-color: blue;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: bold;
+  width: 80px;
+  text-align: center;
+	border-radius: 5%;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
 @keyframes finish{
 	0% {transform : scale(1) }
 	100% {transform: scale(0.3)}
