@@ -1,4 +1,5 @@
 
+
 var first = null, second = null;
 var tiles = 0;
 var time = new Date().getTime();
@@ -14,7 +15,11 @@ $(document).ready(function(){
 	randomizeStartOffset();
 	transitionToStartPosition();
    
-	$(".front").click(function(){
+    $(".front").click(function(e){
+        e.preventDefault();
+     });  
+
+	$(".front").dblclick(function(){
 		if(blockInput){
 			return;
 		}
@@ -40,7 +45,7 @@ $(document).ready(function(){
 				blockInput = true;
 				first.removeClass("activated").addClass("mismatch");
 				second.removeClass("activated").addClass("mismatch");
-				setTimeout(function() { resetWrongTiles(); }, 800);
+				setTimeout(function() { resetWrongTiles(); }, 700);
 			}
 		}
 	});
