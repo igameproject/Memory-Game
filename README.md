@@ -38,7 +38,7 @@ You win when the entire borad is cleared after you have found all the matching p
 ![GameEnds](readme_images/GameEnds.png)
 
 Have fun!!
-
+Learning git 
 
 ## License
 
