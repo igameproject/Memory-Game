@@ -15,7 +15,6 @@ $(document).ready(function(){
 	transitionToStartPosition();
     $('.front').dblclick(function(e){
 		e.preventDefault();
-		console.log("Disabled");
 	  });   
 	  
 	$(".front").click(function(){
