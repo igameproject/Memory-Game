@@ -13,7 +13,11 @@ $(document).ready(function(){
 	
 	randomizeStartOffset();
 	transitionToStartPosition();
-   
+    $('.front').dblclick(function(e){
+		e.preventDefault();
+		console.log("Disabled");
+	  });   
+	  
 	$(".front").click(function(){
 		if(blockInput){
 			return;
