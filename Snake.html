@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snake Game</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style>
+			canvas
+			{
+    			border: 3px solid #111;
+    			background-color: #f1f1f1;
+			}
+		</style>
+	</head>
+	<body onload="startGame()" align="center">
+		<!-- this will show score of the game. -->
+		<p id="demo"><b></b></p>
+		<script>
+			var fruit;
+			var snake;
+			var tail = new Array(100);
+			var nTail, tempX, tempY, prevX, prevY, score;
+			//start the game;
+			function startGame()
+			{
+				//randomly generate a position for both fruit and snake;
+				var fruit_x = Math.floor((Math.random() * 470) + 10);
+				var fruit_y = Math.floor((Math.random()*260) + 10);
+				var snake_x = Math.floor((Math.random() * 470) + 10);
+				var snake_y = Math.floor((Math.random()*260) + 10);
+				nTail = 0;
+				score = 0;
+
+    			myGameArea.start();
+    			//create block for both fruit and snake; 
+    			fruit = new component(10, 10, "red", fruit_x, fruit_y, "fruit");
+    			snake = new component(10, 10, "black", snake_x, snake_y, "snake");
+			}
+			
+			var myGameArea = {
+			    canvas : document.createElement("canvas"),
+			    start : function()
+			    {
+			        this.canvas.width = 480;
+			        this.canvas.height = 270;
+			        this.context = this.canvas.getContext("2d");
+			        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+			        this.interval = setInterval(updateGameArea, 20);
+			        window.addEventListener('keydown', function (e){myGameArea.key = e.keyCode;})
+		        	window.addEventListener('keyup', function (e){myGameArea.key = false;})
+			    },
+			    //clear the screen;
+			    clear : function()
+			    {
+			    	this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+			    }
+			}
+			//this function will return score of the game;
+			function component(width, height, color, x, y, type)
+			{
+			    this.width = width;
+			    this.height = height;
+			    this.speedX = 0;
+			    this.speedY = 0;
+			    this.x = x;
+			    this.y = y;
+			    //update position of the fruit;
+			    this.update_fruit = function()
+			    {
+			    	ctx = myGameArea.context;
+		    		ctx.fillStyle = color;
+		    		ctx.fillRect(this.x, this.y, this.width, this.height);
+			    }
+			    //update position of the snake;
+			    this.update_snake = function()
+			    {
+			    	prevX = this.x;
+			    	prevY = this.y;
+			    	if(Math.abs(snake.x - fruit.x) < 3 && Math.abs(snake.y - fruit.y) < 3)
+					{
+						score += 10;
+						nTail++;
+						fruit.x = Math.floor((Math.random() * 470) + 10);
+						fruit.y = Math.floor((Math.random() * 260) + 10);
+					}
+					for(i = 0; i < nTail - 1; i++)
+					{
+						tempX = tail[i].x;
+						tempY = tail[i].y;
+						tail[i].x = prevX;
+						tail[i].y = prevY;
+						prevX = tempX;
+						prevY = tempY;
+					}
+					if(nTail > 0)
+					{
+						tail[nTail - 1] = new component(10, 10, "green", prevX, prevY);
+					}
+					document.getElementById("demo").innerHTML = "SCORE:: " + score;
+			    	this.x += this.speedX;
+			    	this.y += this.speedY;
+			    	if(snake.x > 480)
+			    	{
+			    		snake.x = 0;
+			    	}
+			    	else if(snake.x < 0)
+			    	{
+			    		snake.x = 480;
+			    	}
+			    	if(snake.y > 270)
+			    	{
+			    		snake.y = 0;
+			    	}
+			    	else if(snake.y < 0)
+			    	{
+			    		snake.y = 270;
+			    	}
+			    	ctx = myGameArea.context;
+		    		ctx.fillStyle = color;
+		    		ctx.fillRect(this.x, this.y, this.width, this.height);
+		    		for(i = 0; i < nTail; i += 1)
+		    		{
+		    			ctx = myGameArea.context;
+		    			ctx.fillStyle = color;
+		    			ctx.fillRect(tail[i].x, tail[i].y, this.width, this.height);
+		    		}
+			    }
+			}
+			function updateGameArea()
+			{
+				myGameArea.clear();
+				//left arrow for left movement;
+				if(myGameArea.key && myGameArea.key == 37)
+				{
+					snake.speedX = -2;
+                	snake.speedY = 0;
+				}
+				//right arrow for right movement;
+			    if(myGameArea.key && myGameArea.key == 39)
+			    {
+			    	snake.speedX = 2;
+                	snake.speedY = 0;
+			    }
+			    //upper arrow for upper movement;
+			    if(myGameArea.key && myGameArea.key == 38)
+			    {
+			    	snake.speedY = -2;
+                	snake.speedX = 0;
+			    }
+			    //lower arrow for lower movement;
+			    if(myGameArea.key && myGameArea.key == 40)
+			    {
+			    	snake.speedY = 2;
+                	snake.speedX = 0;
+			    }
+			    //space for pause;
+			    if(myGameArea.key && myGameArea.key == 32)
+			    {
+			    	snake.speedX = 0;
+            		snake.speedY = 0;
+			    }
+				fruit.update_fruit();
+				snake.update_snake();
+			}
+		</script>
+	</body>
+</html>
