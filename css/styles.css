@@ -89,7 +89,7 @@ body{
 
 .done div.back{
 	animation: finish 0.8s ease-out forwards;
-	animation-timing-function:cubic-bezier(.02,.92,.39,1.72)
+	animation-timing-function:cubic-bezier(.02,.92,.39,1.72);
 	cursor: auto;
 }
 
